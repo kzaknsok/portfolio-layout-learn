@@ -1,0 +1,335 @@
+/* content-2エリア */
+.row.content-2 > .column {
+    align-items: end;
+    height: 100%;
+}
+.column > ul > li {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+    list-style: none;
+}
+.column > ul > li:nth-of-type(2) {
+    margin-left: 4rem;
+}
+.column > ul > li:nth-of-type(3) {
+    margin-left: 6rem;
+}
+.column > ul > li:nth-of-type(4) {
+    margin-left: 8rem;
+}
+.column > ul > li > h2 {
+    font-size: 2rem;
+    color: #f3f3f3;
+    -webkit-text-stroke: 1px rgba(0, 106, 255);
+}
+.column > ul > li > p {
+    font-size: 1.3rem;
+    color: #f3f3f3;
+    -webkit-text-stroke: 1px #333;
+}
+.column > ul > li > h2,
+.column > ul > li > p {
+    margin: 2rem 2rem;
+}
+/* テキストのoverlay部分 */
+/* .column > ul > li > span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(0, 106, 255);
+    opacity: 0.3;
+    font-size: 5rem;
+    padding: 0 2rem;
+} */
+
+.row.content-2 > .column > .img-wrap {
+    width: 80%;
+    height: auto;
+    margin: 6rem auto;
+}
+.row.content-2 > .column > .img-wrap > img {
+    display: block;
+    width: 100%;
+}
+
+.row.content-2 > .column > button {
+    margin-bottom: 5rem;
+}
+
+/* content-2エリア ******************************************************************* */
+
+/* navbar ******************************************************************* */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 106, 255);
+}
+nav > ul {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav > ul > li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+nav > ul > li > a {
+    text-decoration: none;
+    color: #f3f3f3;
+    padding: 0 2rem;
+    /* ホバーアクションに対応した設定 */
+    position: relative;
+    overflow: hidden;
+}
+/* borderラインを描画 width 0 初期値は無いものとしている */
+nav > ul > li > a::before,
+nav > ul > li > a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    background: #f3f3f3;
+    transition:  all 0.3s;
+}
+nav > ul > li > a::before {
+    left: 50%;
+}
+nav > ul > li > a::after {
+    right: 50%;
+}
+nav > ul > li > a:hover::before {
+    left: 0;
+    width: 100%;
+}
+nav > ul > li > a:hover::after {
+    right: 0;
+    width: 100%;
+}
+/* navbar ******************************************************************* */
+
+/* header ******************************************************************* */
+.header-img {
+    width: 100%;
+    height: 100vh;
+    background: blueviolet;
+}
+.header-img > img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* header ******************************************************************* */
+
+/* content-1エリア ******************************************************************* */
+.row.content-1 {
+    height: 600px;
+}
+.column > h2 {
+    font-size: 2rem;
+}
+.column > p {
+    font-size: 1.3rem;
+}
+.column > h2,
+.column > p {
+    padding: 1rem 3rem;
+    color: rgba(0, 106, 255);
+}
+.column > button {
+    background: rgba(0, 106, 255);
+    border: none;
+    font-size: 1.3rem;
+    color: #f3f3f3;
+    margin: 1rem 3rem;
+    padding: 1rem 3rem;
+    width: 30%;
+}
+.img-wrap {
+    width: 100%;
+    height: 100%;
+}
+.img-wrap > img {
+    /* img要素はデフォルトでInline要素のため下部に余計なスペースがある => blockで解消 */
+    display: block;
+    width: 100%;
+    /* .rowで指定した高さがあるなら最大値をそこに準拠する */
+    max-height: 100%;
+    object-fit: cover;
+}
+/* content-1エリア ******************************************************************* */
+
+/* ２枚画像のエリア ******************************************************************* */
+.img-row {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.img-row  > .img-wrap {
+    position: relative;
+    width: 35%;
+    overflow: hidden;
+}
+.img-row  > .img-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.img-row  > .img-wrap:hover::before {
+    background: rgba(0, 0, 0, 0.719);
+    /* hoverイベントは維持しつつ背景色要素を適用できた */
+    pointer-events: none;
+    transform: scale(1.3);
+}
+.img-wrap > a > img {
+    width: 100%;
+    height: 100%;
+}
+.img-wrap > a > p {
+    /* .img-row > .img-wrapのrelativeに対するabsolute */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f3f3f3;
+    font-size: 1.5rem;
+}
+/* ２枚画像のエリア ******************************************************************* */
+
+/* form ******************************************************************* */
+.form-wrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+form {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    background-color: rgba(0, 106, 255, 0.645);
+    border-radius: 2rem;
+}
+form > label {
+    font-size: 1.5rem;
+    color: #f3f3f3;
+}
+form > input {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: none;
+}
+form > textarea {
+    padding: 0.5rem;
+    border: none;
+}
+.btn-wrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn-wrap > input {
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+}
+.btn-wrap > input:nth-child(1) {
+    background: rgb(17, 0, 255);
+    color: #f3f3f3;
+}
+.btn-wrap > input:nth-child(2) {
+    background: #f3f3f3;
+    color: rgb(17, 0, 255);
+}
+/* form ******************************************************************* */
+
+/* content-3 MAP ******************************************************************* */
+.row.content-3 {
+    align-items: center;
+    padding: 3rem;
+}
+.row.content-3 > .column:nth-child(1) {
+    align-items: end;
+}
+/* content-3 MAP ******************************************************************* */
+
+/* footer ******************************************************************* */
+footer {
+    width: 100%;
+    height: 300px;
+    background: rgba(0, 106, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer > .copy {
+    font-size: 2rem;
+    color: #f3f3f3;
+}
+footer > ul {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer > ul > li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+footer > ul > li > a {
+    text-decoration: none;
+    color: #f3f3f3;
+    padding: 0 2rem;
+    /* ホバーアクションに対応した設定 */
+    position: relative;
+    overflow: hidden;
+}
+/* borderラインを描画 width 0 初期値は無いものとしている */
+footer > ul > li > a::before,
+footer > ul > li > a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    background: #f3f3f3;
+    transition:  all 0.3s;
+}
+footer > ul > li > a::before {
+    left: 50%;
+}
+footer > ul > li > a::after {
+    right: 50%;
+}
+footer > ul > li > a:hover::before {
+    left: 0;
+    width: 100%;
+}
+footer > ul > li > a:hover::after {
+    right: 0;
+    width: 100%;
+}
+/* footer ******************************************************************* */

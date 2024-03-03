@@ -1,0 +1,62 @@
+    /* 共通 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background: url('../img/rove.jpg');
+    }
+    
+    hr {
+        border: 1px solid #f3f3f3;
+        margin: 150px 0;
+    }
+    .column > ul > li > hr {
+        margin: 0;
+        border: 1px solid rgba(0, 106, 255);
+    }
+    
+    h1 {
+        display: block;
+        color: #f3f3f3;
+        font-size: 5rem;
+    }
+    .title-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 150px;
+    }
+    
+    header {
+        width: 100%;
+        height: 100vh;
+        margin-bottom: 150px;
+    }
+    section {
+        width: 100%;
+        height: auto;
+        margin-bottom: 150px;
+    }
+    .container {
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+    .row {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        background: #f3f3f3;
+    }
+    .column {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* columnのため縦方向に移動している */
+        justify-content: center;
+    }
+    /* 共通 */
