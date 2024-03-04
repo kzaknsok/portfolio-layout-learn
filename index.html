@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
     <title>Flex Layout Page</title>
 </head>
 <body>
@@ -19,23 +20,42 @@
     </nav>
     <!-- navbar -->
 
+    <!-- humburger-menu for mobile -->
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="humburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Poricy</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- humburger-menu for mobile -->
+
     <!-- header -->
     <header>
         <div class="container">
             <div class="header-img">
-                <img src="assets/img/night-view3.jpg" alt="Header-Img" style="background: purple;">
+                <img src="assets/img/night-view3.jpg" alt="Header-Img">
             </div>
         </div>
     </header>
     <!-- header -->
 
     <!-- content-1 -->
-    <div class="title-wrap">
+    <div class="title-wrap unvisible">
         <h1>About</h1>
     </div>
     
     <section>
-        <div class="container">
+        <div class="container unvisible">
             <div class="row content-1">
                 <div class="column">
                     <div class="img-wrap">
@@ -45,7 +65,7 @@
                 <div class="column">
                     <h2>Column</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias atque, accusantium necessitatibus reiciendis odio magnam a quaerat minima. Inventore soluta laudantium illo? Esse minus laudantium cumque, nemo inventore itaque quam?</p>
-                    <button>Read More</button>
+                    <button><span>Read More</span></button>
                 </div>
             </div>
         </div>
@@ -53,7 +73,7 @@
     <!-- content-1 -->
 
     <!-- img -->
-    <div class="container">
+    <div class="container unvisible">
         <div class="img-row">
             <div class="img-wrap">
                 <a href="#">
@@ -74,12 +94,12 @@
     <hr>
     
     <!-- content-2 -->
-    <div class="title-wrap">
+    <div class="title-wrap unvisible">
         <h1>Poricy</h1>
     </div>
     
     <section>
-        <div class="container">
+        <div class="container unvisible">
             <div class="row content-2">
                 <div class="column">
                     <ul>
@@ -108,7 +128,7 @@
                             <hr>
                         </li>
                     </ul>
-                    <button>And More</button>
+                    <button><span>And More</span></button>
                 </div>
                 <div class="column">
                     <div class="img-wrap">
@@ -153,7 +173,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.6956502822902!2d135.50241684710898!3d34.61955061270214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dd42627a14df%3A0x79c9bb26edcd0989!2z5Y-k5rGg6b6N546L!5e0!3m2!1sja!2sjp!4v1709442711638!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="column">
-                    <p><i class="fa-solid fa-building"></i>  〒558-0055 大阪府大阪市住吉区万代４丁目６−１０</p>
+                    <p><i class="fa-solid fa-building"></i>  〒558-0055<br>大阪府大阪市住吉区万代４丁目６−１０</p>
                     <p><i class="fa-solid fa-phone"></i>  00-0000-0000</p>
                     <p><i class="fa-solid fa-envelope"></i>  osaka@osaka.ne.jp</p>
                 </div>
@@ -161,6 +181,12 @@
         </div>
     </section>
     <!-- content-3 -->
+
+    <!-- Top戻るボタン -->
+    <div class="btn-container">
+        <button id="back-to-top" class="back-to-top">▲</button>
+    </div>
+    <!-- Top戻るボタン -->
     
     <!-- footer -->
     <footer>
@@ -175,5 +201,6 @@
     <!-- footer -->
     
     <script src="https://kit.fontawesome.com/5b71ef7d68.js" crossorigin="anonymous"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

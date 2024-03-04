@@ -8,6 +8,10 @@
         background: url('../img/rove.jpg');
     }
     
+    .menu-wrap {
+        display: none;
+    }
+
     hr {
         border: 1px solid #f3f3f3;
         margin: 150px 0;
@@ -60,3 +64,13 @@
         justify-content: center;
     }
     /* 共通 */
+
+    /* 要素の出現 */
+    .unvisible {
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
+    }
+    .unvisible.visible {
+        opacity: 1;
+    }
+    /* 要素の出現 */
